@@ -11,7 +11,7 @@ npm install --save restful-fluency
 Import the server builder in your javascript code:
 
 ```javascript
-const ServerBuilder = require('./server-builder');
+const restBuilder = require('restful-fluency');
 ```
 
 ## Server Types
@@ -41,7 +41,7 @@ const ServerBuilder = require('./server-builder');
 ## Example
 
 ```javascript
-ServerBuilder.DEFAULT
+restBuilder.DEFAULT
 .withARestfulApi().thatUsesMongoModel(productModel).accessibleFrom('product').withReadonlyAccess().and()
 .withARestfulApi().thatUsesMongoModel(orderModel).accessibleFrom('order').and()
 .whichListensOnPort(8080)
